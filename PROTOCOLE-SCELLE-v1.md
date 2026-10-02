@@ -1,4 +1,6 @@
-# Protocole proposé v1 (NON scellé — le chef scelle)
+# PROTOCOLE SCELLÉ v1 — scellé sur ordre du chef le 02/10/2026, AVANT le run de mesure
+
+Exécution : `python3 mesure_v1.py` (scellé avec ce fichier, voir `SCEAU-v1.sha256`). Verdict par N (8 et 16).
 
 Base : revue GLM (`historique/RETOUR-GLM-SIMULTANEITE-v1.md`), chiffres clés reproduits par Arena le 02/10.
 

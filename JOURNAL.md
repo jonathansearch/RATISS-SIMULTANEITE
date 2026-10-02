@@ -18,3 +18,4 @@
 - Borne GLM : sans couplage, cohérence de parité ≤ 0,474^N → explique la disparition de l'effet à N=8, 16.
 - Accélération GLM intégrée (bruit pré-tiré) : résultats identiques bit à bit, vérifié.
 - Protocole proposé (non scellé) : `PROTOCOLE-PROPOSE.md`, critère principal corrigé (effet du couplage, pas du drive).
+- Protocole v1 SCELLÉ sur ordre du chef (SCEAU-v1.sha256), avant tout run de mesure.
