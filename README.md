@@ -25,7 +25,7 @@ nos portes et nos micro-ondes, qui produise des corrélations utiles, sans imite
 - Aucune intrication : tout est classique. Aucun S > 2.
 - Aucune accélération quantique, aucun lien avec la cryptographie.
 - Le verrouillage par couplage est une physique connue (Kuramoto forcé) : c'est un outil, pas une découverte.
-- Aucun résultat scellé pour l'instant : les critères seront scellés (SHA-256) par le chef avant le premier run de mesure.
+- **Premier run scellé (v1)** : la parité ne profite pas du couplage à N=16 (1,2σ) ; la synergie de verrouillage Rd passe à N=16 (8,0σ). Voir `RESULTATS-v1.md`.
 
 ## Rejouer
 ```bash

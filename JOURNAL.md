@@ -19,3 +19,4 @@
 - Accélération GLM intégrée (bruit pré-tiré) : résultats identiques bit à bit, vérifié.
 - Protocole proposé (non scellé) : `PROTOCOLE-PROPOSE.md`, critère principal corrigé (effet du couplage, pas du drive).
 - Protocole v1 SCELLÉ sur ordre du chef (SCEAU-v1.sha256), avant tout run de mesure.
+- Run de mesure v1 : parité (principal) ÉCHOUE à N=16, non lu à N=8 (non mûr) ; synergie Rd (secondaire) PASSE à N=16 (8,0σ), ÉCHOUE à N=8. Voir `RESULTATS-v1.md`.
