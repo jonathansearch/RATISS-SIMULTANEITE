@@ -10,3 +10,11 @@
 - v3 optimisée par Arena (drive d'entraînement, observables dans le repère du drive, contrôle d'instrument sur valeurs connues, vectorisation) : scan exploratoire, non scellé — voir README.
 - Les prompts échangés avec RATISS sont dans `historique/`.
 - Note : `historique/PROMPT-RETOUR-RATISS-V4.md` n'a pas été envoyé (le chef a choisi d'optimiser directement la v3).
+
+## 02/10/2026 — revue GLM (v1)
+- R4 PASS sur clone neuf chez GLM : 24/24 lignes identiques bit à bit (numpy 2.1.3).
+- Reproduits par Arena : identité Kuramoto (écart ≤ 1,2e−11), effet drive Pgl N=4 J=3 apparié +0,1637±0,0237 (6,9σ), synergie Rd N=16 J=1 +0,1424±0,0133 (10,7σ), Pgl non stationnaire (moitiés N=8 : −0,060±0,036).
+- Étalon Fokker-Planck exact à J=0 (GLM) : le moteur reproduit la statistique stationnaire à ~1–3 %.
+- Borne GLM : sans couplage, cohérence de parité ≤ 0,474^N → explique la disparition de l'effet à N=8, 16.
+- Accélération GLM intégrée (bruit pré-tiré) : résultats identiques bit à bit, vérifié.
+- Protocole proposé (non scellé) : `PROTOCOLE-PROPOSE.md`, critère principal corrigé (effet du couplage, pas du drive).

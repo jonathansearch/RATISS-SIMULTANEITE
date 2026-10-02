@@ -18,7 +18,7 @@ nos portes et nos micro-ondes, qui produise des corrélations utiles, sans imite
 3. **v3 optimisée** (`simmat_v3_opt.py`, 10 graines en parallèle, ~35 s) — **scan exploratoire, non scellé** :
    - le couplage en anneau **aide les portes à se verrouiller sur un drive commun** malgré le bruit local
      (N=16 : Rd 0,42 avec drive seul, 0,48 avec couplage seul, **0,81** avec les deux) ;
-   - la « parité » GHZ-like (cohérence de la phase totale) ne gagne au couplage qu'à **N=4** (≈ 4,7 σ) ;
+   - la « parité » GHZ-like (cohérence de la phase totale) : effet du drive à N=4, J=3 = 6,9 σ en test apparié (revue GLM) ;
      l'effet n'est pas significatif à N=8 et N=16 (au niveau du plancher ≈ 0,07).
 
 ## Ce qui n'est PAS établi

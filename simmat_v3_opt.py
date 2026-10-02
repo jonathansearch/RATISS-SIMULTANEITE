@@ -37,13 +37,13 @@ def simulate(N, J, A, sx, so, seeds, T=20000, dt=0.01, w0=5.0, wd=5.0):
     S = len(seeds)
     om = np.stack([w0 + so*np.random.default_rng(10_000+s).standard_normal(N) for s in seeds])   # désordre figé
     phi = np.stack([np.random.default_rng(20_000+s).uniform(-np.pi, np.pi, N) for s in seeds])   # état initial
-    rn = [np.random.default_rng(30_000+s) for s in seeds]                                         # bruit local
+    nz = np.stack([np.random.default_rng(30_000+s).standard_normal((T, N)) for s in seeds])        # bruit local, pré-tiré (GLM, identique bit à bit)
     m = T // 2; Rd = np.zeros(S); Z = np.zeros(S, complex)
     for t in range(T):
         tt = t*dt
         cpl = np.sin(np.roll(phi, 1, 1) - phi) + np.sin(np.roll(phi, -1, 1) - phi)   # anneau, O(N)
         drv = A*np.sin(wd*tt - phi)                                                   # entraînement par le bus
-        noise = np.stack([r.standard_normal(N) for r in rn])
+        noise = nz[:, t, :]
         phi = phi + (om + drv + J*cpl)*dt + sx*np.sqrt(dt)*noise
         if t >= m:
             rel = phi - wd*(tt+dt)
